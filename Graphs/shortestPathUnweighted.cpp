@@ -26,32 +26,32 @@ std::vector<int> dfs(std::map<int, std::vector<int>>graph, int startNode, int nu
 			}
 
 		}
-		
+
 	}
 	return std::move(prevArr);
 
 }
 
-void shortestPath(int start, int end,int numberOfNodes,std::map<int,std::vector<int>> graph) {
+void shortestPath(int start, int end, int numberOfNodes, std::map<int, std::vector<int>> graph) {
 
 	auto prevArr = dfs(graph, start, numberOfNodes);
 	std::stack<int>path;
 	std::cout << "shortest path from " << start << " to " << end << std::endl;
-	
+
 	//last is used while displaying output
 	int last = end;
-	
-	while (end !=  start) {
+
+	while (end != start) {
 		path.push(end);
 		end = prevArr[end];
 	}
 	path.push(start);
-	
-	
+
+
 	// for printing path
 	while (!path.empty()) {
-		std::string joinString = path.top() !=last ? "-->" : "";
-		std::cout << path.top() <<joinString;
+		std::string joinString = path.top() != last ? "-->" : "";
+		std::cout << path.top() << joinString;
 		path.pop();
 	}
 }
