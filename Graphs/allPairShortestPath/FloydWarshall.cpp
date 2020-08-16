@@ -50,9 +50,10 @@ int main() {
 	matrix[3] = { 2 , INFINITY , INFINITY , 0 };
 
 	floydWarshall(matrix,numberOfRows);
-
-	std::cout << "array with shortest path of each pair is " << std::endl;
+	std::cout<<"array with shortest path of each pair is "<<std::endl;
 	print2Darray(matrix,numberOfRows);
+
+	std::cout << "\n End of Calculation" << std::endl;
 
 
 }
