@@ -36,7 +36,6 @@ public:
 	void solve() {
 		for (int i = 0; i < numberOfNodes; i++) {
 			if(!isVisited[i])dfs(i);
-			
 		}
 	}
 
