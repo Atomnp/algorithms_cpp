@@ -32,9 +32,6 @@ void sort(std::stack<int>& stack) {
 	insert(top, stack);
 }
 
-
-
-
 int main() {
 	std::cout << "sorting array started" << std::endl;
 	//create stack
