@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stack>
+#include"./utils.h"
 
 void printStack(std::stack<int>stack) {
 	//this function prints stack from top to bottom
@@ -36,10 +37,10 @@ int main() {
 
 	std::stack<int >stack;
 	stack.push(5);
-
 	
 	printStack(stack);
 	std::cout << "=n ---------------" << std::endl;
+	
 	removeMid(stack);
 	printStack(stack);
 }
