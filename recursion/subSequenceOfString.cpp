@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <set>
 
 
 
-void solve(std::string input, std::vector<std::string>& output,std::string temp) {
+void solve(std::string input, std::set<std::string>& output,std::string temp) {
 	if (input.length() == 0) {
-		output.push_back(temp);
+		output.insert(temp);
 		
 	}
 	else {
@@ -19,19 +20,19 @@ void solve(std::string input, std::vector<std::string>& output,std::string temp)
 	}
 
 }
-std::vector<std::string> subSequence(std::string input) {
+std::set<std::string> subSequence(std::string input) {
 	//this step in unimportant
 	std::reverse(input.begin(), input.end());
-	std::vector<std::string>output;
+	std::set<std::string>output;
 	std::string temp = "";
 	solve(input, output, temp);
 
 	//sorting is also not important
 	//just for making output more readable
-	std::sort(output.begin(), output.end());
-	std::sort(output.begin(),output.end(), [](std::string a, std::string b) {
-		return a.length() < b.length();
-	});
+	//std::sort(output.begin(), output.end());
+	//std::sort(output.begin(),output.end(), [](std::string a, std::string b) {
+	//	return a.length() < b.length();
+	//});
 	
 	return output;
 }
@@ -40,7 +41,7 @@ std::vector<std::string> subSequence(std::string input) {
 int main() {
 	std::string input = "abc";
 
-	std::vector<std::string> output=subSequence(input);
+	std::set<std::string> output=subSequence(input);
 
 	for (auto item : output) {
 		if (item.length() == 0) {
