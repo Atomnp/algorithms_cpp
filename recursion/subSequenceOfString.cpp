@@ -27,7 +27,12 @@ std::vector<std::string> subSequence(std::string input) {
 	solve(input, output, temp);
 
 	//sorting is also not important
-	std::sort(output.begin(),output.end());
+	//just for making output more readable
+	std::sort(output.begin(), output.end());
+	std::sort(output.begin(),output.end(), [](std::string a, std::string b) {
+		return a.length() < b.length();
+	});
+	
 	return output;
 }
 
