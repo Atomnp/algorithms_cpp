@@ -49,9 +49,9 @@ int evaluatePostFix(std::string expression) {
 	}
 	return popAndReturn(stack);
 }
-int main() {
-	std::string expression = "56*9+";
-	int result = evaluatePostFix(expression);
-	std::cout << "result is " << result << std::endl;
-
-}
+//int main() {
+//	std::string expression = "56*9+";
+//	int result = evaluatePostFix(expression);
+//	std::cout << "result is " << result << std::endl;
+//
+//}

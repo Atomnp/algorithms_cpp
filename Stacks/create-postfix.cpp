@@ -16,7 +16,7 @@ int priority(char a) {
 std::string createPostfix(std::string expression) {
 	std::string result;
 	std::stack<char>operatorStack;
-	//j
+
 	char topOfStack='1';
 	for (char item : expression) {
 		if (isOperator(item)) {
@@ -61,9 +61,9 @@ std::string createPostfix(std::string expression) {
 	}
 	return result;
 }
-test client
-int main() {
-	std::string expression = "(a*b)+c";
-	std::string result=createPostfix(expression);
-	std::cout << result << std::endl;
-}
+
+//int main() {
+//	std::string expression = "a+b+c";
+//	std::string result=createPostfix(expression);
+//	std::cout << result << std::endl;
+//}
