@@ -62,8 +62,8 @@ std::string createPostfix(std::string expression) {
 	return result;
 }
 
-//int main() {
-//	std::string expression = "a+b+c";
-//	std::string result=createPostfix(expression);
-//	std::cout << result << std::endl;
-//}
+int main() {
+	std::string expression = "a+b+c";
+	std::string result=createPostfix(expression);
+	std::cout << result << std::endl;
+}

@@ -16,10 +16,7 @@ std::string createPrefix(std::string input) {
 	//reverse the input
 	std::string reversedInput = reverse(input);
 	//create the postfix
-	//create the postfix
 	std::string pf=createPostfix(reversedInput);
-
-
 	//again reverse the postfix outpot
 	std::string result = reverse(pf);
 	return result;
