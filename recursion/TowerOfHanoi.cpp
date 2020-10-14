@@ -2,7 +2,7 @@
 #include <stack>
 #include "./utils.h"
 void solve(int numOfItems,std::stack<int>&from, std::stack<int>&mid, std::stack<int>&to) {
-	//move n-1 items to mid from from using to
+	//move n-1 items to 'mid' from 'from' using 'to'
 	if (numOfItems > 0) {
 		solve(numOfItems - 1, from, to, mid);
 		int last = from.top();
@@ -10,6 +10,7 @@ void solve(int numOfItems,std::stack<int>&from, std::stack<int>&mid, std::stack<
 		to.push(last);
 		solve(numOfItems - 1, mid, from, to);
 	}
+	else return;
 
 }
 

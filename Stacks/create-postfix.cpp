@@ -42,7 +42,7 @@ std::string createPostfix(std::string expression) {
 				continue;
 			}
 			//current operator has less priority than top of stack? then push top of stack to result
-			if (priority(item) < priority(topOfStack) and topOfStack!='(') {
+			if (priority(item) <= priority(topOfStack) and topOfStack!='(') {
 				result.push_back(topOfStack);
 				operatorStack.pop();
 			}
@@ -63,7 +63,7 @@ std::string createPostfix(std::string expression) {
 }
 
 int main() {
-	std::string expression = "a+b+c";
+	std::string expression = "a+b-(c*d/e+f)-g*h";
 	std::string result=createPostfix(expression);
 	std::cout << result << std::endl;
 }
